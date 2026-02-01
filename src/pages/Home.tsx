@@ -1,4 +1,4 @@
-import { ArrowRight, AlertTriangle, CheckCircle2, Database, Layers, Shield, Cpu, TrendingDown, Clock } from "lucide-react";
+import { ArrowRight, AlertTriangle, CheckCircle2, Database, Layers, Shield, Cpu, TrendingDown, Clock, Search, Zap } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -34,6 +34,16 @@ const failurePoints = [
     icon: Shield,
     title: "Compliance gaps",
     description: "Data lineage unclear. Access controls inconsistent. GDPR or SOC2 requests become fire drills.",
+  },
+  {
+    icon: Search,
+    title: "RAG pipeline complexity",
+    description: "Vector stores, embedding pipelines, and retrieval quality are hard to get right and harder to debug at scale.",
+  },
+  {
+    icon: Zap,
+    title: "LLM inference at scale",
+    description: "GPU provisioning, model serving, and latency optimization require deep infrastructure expertise most teams lack.",
   },
 ];
 
