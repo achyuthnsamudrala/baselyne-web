@@ -17,7 +17,7 @@ const App = () => (
     <TooltipProvider>
       <Toaster />
       <Sonner />
-      <BrowserRouter>
+      <BrowserRouter basename="/baselyne-web">
         <Routes>
           <Route path="/" element={<Home />} />
           <Route path="/services" element={<Services />} />
