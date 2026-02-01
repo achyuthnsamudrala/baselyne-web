@@ -4,7 +4,7 @@ import path from "path";
 
 // https://vitejs.dev/config/
 export default defineConfig(({ mode }) => ({
-  base: mode === "production" ? "/baselyne-web/" : "/",
+  base: "/baselyne-web/",
   server: {
     host: "::",
     port: 8080,
