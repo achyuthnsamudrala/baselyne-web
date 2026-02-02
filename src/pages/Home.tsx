@@ -88,8 +88,8 @@ export default function Home() {
   return (
     <Layout>
       <SEO
-        title="AI, Data & MLOps Infrastructure Consulting | Baselyne Systems"
-        description="Expert consulting for AI infrastructure, data platforms, and MLOps. We help teams move AI from experimentation into production with reliable, scalable infrastructure."
+        title="AI, Data & MLOps Consulting | Baselyne Systems"
+        description="AI infrastructure, data platforms, and MLOps consulting. We help teams move AI from experimentation into production."
         keywords="AI infrastructure consulting, MLOps consulting, data infrastructure consulting, ML platform, machine learning infrastructure, AI consulting firm, data engineering consulting"
         canonical="https://baselynesystems.com"
         structuredData={combinedSchema}

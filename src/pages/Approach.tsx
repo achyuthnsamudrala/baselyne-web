@@ -77,8 +77,8 @@ export default function Approach() {
   return (
     <Layout>
       <SEO
-        title="Our Consulting Approach - How We Deliver AI & MLOps Projects"
-        description="Our structured approach to AI infrastructure and MLOps consulting: from assessment to handover, we deliver production-ready systems with full knowledge transfer."
+        title="Our Approach | How We Deliver AI Projects"
+        description="Structured AI and MLOps consulting: from assessment to handover, we deliver production-ready systems with knowledge transfer."
         keywords="AI consulting process, MLOps implementation methodology, data infrastructure project delivery, ML platform consulting approach"
         canonical="https://baselynesystems.com/approach"
       />

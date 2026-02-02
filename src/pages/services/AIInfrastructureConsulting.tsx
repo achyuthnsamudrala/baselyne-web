@@ -51,8 +51,8 @@ export default function AIInfrastructureConsulting() {
   return (
     <Layout>
       <SEO
-        title="AI Infrastructure Consulting | GPU, LLM & ML Platform Experts"
-        description="Expert AI infrastructure consulting for GPU orchestration, LLM serving, and ML platform engineering. We help teams build scalable, cost-controlled AI compute infrastructure."
+        title="AI Infrastructure Consulting | Baselyne Systems"
+        description="AI infrastructure consulting for GPU orchestration, LLM serving, and ML platforms. Scalable, cost-controlled compute."
         keywords="AI infrastructure consulting, GPU orchestration consulting, LLM infrastructure, ML platform consulting, AI compute optimization, machine learning infrastructure"
         canonical="https://baselynesystems.com/services/ai-infrastructure-consulting"
         structuredData={aiInfraServiceSchema}

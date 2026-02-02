@@ -51,8 +51,8 @@ export default function DataInfrastructureConsulting() {
   return (
     <Layout>
       <SEO
-        title="Data Infrastructure Consulting | Lakehouse & Data Platform Experts"
-        description="Expert data infrastructure consulting for lakehouse architecture, pipeline orchestration, and data governance. We build reliable, scalable data platforms at petabyte scale."
+        title="Data Infrastructure Consulting | Baselyne Systems"
+        description="Data infrastructure consulting for lakehouse architecture, pipelines, and governance. Reliable, scalable data platforms."
         keywords="data infrastructure consulting, data platform consulting, lakehouse consulting, data engineering consulting, data pipeline consulting, data governance consulting"
         canonical="https://baselynesystems.com/services/data-infrastructure-consulting"
         structuredData={dataInfraServiceSchema}
