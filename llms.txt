@@ -1,0 +1,53 @@
+# Baselyne Systems
+
+> AI infrastructure, data engineering, and MLOps consulting. We help teams move AI from experimentation into production.
+
+## About
+
+Baselyne Systems is a founder-led consulting firm focused on AI infrastructure, data engineering, and MLOps. We bring large-scale engineering experience from Meta and Alphabet to companies building production AI systems.
+
+## Services
+
+### Data Infrastructure
+Modern data platforms for AI workloads: lakehouse architecture, real-time and batch pipelines, data governance, semantic data layers, and vector search infrastructure for RAG.
+URL: https://baselynesystems.com/services/data-infrastructure-consulting
+
+### MLOps
+Get AI from prototype to production: model and prompt versioning, deployment infrastructure, evaluation and monitoring, ML pipeline orchestration, and continuous improvement workflows.
+URL: https://baselynesystems.com/services/mlops-consulting
+
+### AI Infrastructure
+Scalable AI compute with cost control: GPU orchestration, cost attribution, LLM serving infrastructure, security and compliance, and AI observability.
+URL: https://baselynesystems.com/services/ai-infrastructure-consulting
+
+## Founder
+
+Achyuth Samudrala - Nearly a decade of infrastructure engineering experience, including six years at Meta and Alphabet. Built petabyte-scale data platforms and systems handling 100M+ queries per second.
+LinkedIn: https://www.linkedin.com/in/achyuthsamudrala/
+
+## Contact
+
+Schedule a 30-minute call to discuss your infrastructure challenges.
+Calendly: https://calendly.com/achyuth-1995/30min
+Website: https://baselynesystems.com/contact
+
+## Key Pages
+
+- Home: https://baselynesystems.com/
+- Services: https://baselynesystems.com/services
+- Approach: https://baselynesystems.com/approach
+- About: https://baselynesystems.com/about
+- Contact: https://baselynesystems.com/contact
+
+## Topics We Help With
+
+- AI infrastructure consulting
+- MLOps consulting
+- Data infrastructure consulting
+- GPU orchestration and cost optimization
+- LLM serving and inference optimization
+- RAG pipeline architecture
+- Data platform modernization
+- ML model deployment
+- AI observability and monitoring
+- Data governance for AI systems

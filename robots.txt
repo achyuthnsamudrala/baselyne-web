@@ -14,3 +14,8 @@ User-agent: *
 Allow: /
 
 Sitemap: https://baselynesystems.com/sitemap.xml
+
+# LLM-specific content
+# See https://llmstxt.org for more information
+# llms.txt: https://baselynesystems.com/llms.txt
+# llms-full.txt: https://baselynesystems.com/llms-full.txt
