@@ -47,11 +47,11 @@ const failurePoints = [
   {
     icon: Search,
     title: "RAG pipeline complexity",
-    description: "Vector stores, embedding pipelines, and retrieval quality are hard to get right and harder to debug at scale.",
+    description: "Vector stores, embedding pipelines, and retrieval quality are hard to get right and harder to debug in production.",
   },
   {
     icon: Zap,
-    title: "LLM infrastructure at scale",
+    title: "Production LLM infrastructure",
     description: "GPU provisioning, model serving, and latency optimization require deep infrastructure expertise most teams lack.",
   },
 ];
@@ -70,7 +70,7 @@ const outcomes = [
   {
     icon: Database,
     title: "Cost-controlled infrastructure",
-    description: "Right-sized compute with clear cost attribution per team, model, and use case.",
+    description: "Right-sized compute with clear cost visibility across models and use cases.",
   },
   {
     icon: CheckCircle2,
@@ -108,7 +108,7 @@ export default function Home() {
               />
             </h1>
             <p className="mt-6 text-lg text-muted-foreground sm:text-xl">
-              We help data and ML teams move AI from experimentation into production by building reliable, secure, and cost-controlled infrastructure at scale.
+              We help data and ML teams move AI from experimentation into production by building reliable, secure, and cost-effective infrastructure.
             </p>
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg">
@@ -139,7 +139,7 @@ export default function Home() {
               Where AI projects get stuck
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Most teams don't lack ML talent. They lack the infrastructure to make that talent effective at scale.
+              Most teams don't lack ML talent. They lack the infrastructure to make that talent effective.
             </p>
           </div>
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -167,7 +167,7 @@ export default function Home() {
               Infrastructure that enables your team
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Systems designed for the operational reality of running ML at scale, not just the happy path.
+              Systems designed for the operational reality of running ML in production, not just the happy path.
             </p>
           </div>
           <div className="mt-16 grid gap-6 sm:grid-cols-2 lg:grid-cols-4">
@@ -209,7 +209,7 @@ export default function Home() {
               <div className="rounded-lg border border-border bg-card p-6">
                 <h3 className="font-semibold text-foreground">Data Infrastructure</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Large-scale pipelines, lakehouse platforms, and data governance that scales.
+                  Reliable pipelines, lakehouse platforms, and data governance that grows with you.
                 </p>
               </div>
               <div className="rounded-lg border border-border bg-card p-6">
