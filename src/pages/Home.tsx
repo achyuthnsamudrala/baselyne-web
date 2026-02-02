@@ -4,6 +4,14 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/Layout";
 import { SEO, organizationSchema, professionalServiceSchema } from "@/components/SEO";
+import { TypewriterText } from "@/components/TypewriterText";
+
+const heroTaglines = [
+  "AI and data systems that actually run in production.",
+  "Data infrastructure that scales with your ambitions.",
+  "MLOps that gets models out of notebooks.",
+  "AI infrastructure without the runaway costs.",
+];
 
 const failurePoints = [
   {
@@ -91,8 +99,13 @@ export default function Home() {
         <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
         <div className="container relative mx-auto px-4 py-24 lg:px-8 lg:py-32">
           <div className="mx-auto max-w-3xl text-center">
-            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl">
-              AI infrastructure that actually runs in production
+            <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl min-h-[2.4em] sm:min-h-[2.4em] lg:min-h-[1.2em]">
+              <TypewriterText
+                texts={heroTaglines}
+                typingSpeed={70}
+                deletingSpeed={40}
+                pauseDuration={4000}
+              />
             </h1>
             <p className="mt-6 text-lg text-muted-foreground sm:text-xl">
               We help data and ML teams move AI from experimentation into production by building reliable, secure, and cost-controlled infrastructure at scale.
