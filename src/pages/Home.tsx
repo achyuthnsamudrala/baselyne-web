@@ -46,8 +46,8 @@ const failurePoints = [
   },
   {
     icon: Search,
-    title: "RAG pipeline complexity",
-    description: "Vector stores, embedding pipelines, and retrieval quality are hard to get right and harder to debug in production.",
+    title: "Works locally, breaks in prod",
+    description: "Environment mismatches between notebooks, staging, and production. Different results everywhere, impossible to debug.",
   },
   {
     icon: Zap,
