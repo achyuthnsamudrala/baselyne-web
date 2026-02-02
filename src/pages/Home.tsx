@@ -206,24 +206,24 @@ export default function Home() {
               </Button>
             </div>
             <div className="space-y-4">
-              <div className="rounded-lg border border-border bg-card p-6">
+              <Link to="/services/data-infrastructure-consulting" className="block rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/50 hover:bg-accent/50">
                 <h3 className="font-semibold text-foreground">Data Infrastructure</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Reliable pipelines, lakehouse platforms, and data governance that grows with you.
                 </p>
-              </div>
-              <div className="rounded-lg border border-border bg-card p-6">
+              </Link>
+              <Link to="/services/mlops-consulting" className="block rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/50 hover:bg-accent/50">
                 <h3 className="font-semibold text-foreground">MLOps & Model Platforms</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Model deployment, monitoring, and lifecycle management for production workloads.
                 </p>
-              </div>
-              <div className="rounded-lg border border-border bg-card p-6">
+              </Link>
+              <Link to="/services/ai-infrastructure-consulting" className="block rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/50 hover:bg-accent/50">
                 <h3 className="font-semibold text-foreground">AI Infrastructure</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Scalable compute, cost control, and security for GPU-intensive workloads.
                 </p>
-              </div>
+              </Link>
             </div>
           </div>
         </div>
