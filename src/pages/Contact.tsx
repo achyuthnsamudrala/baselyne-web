@@ -2,6 +2,7 @@ import { ArrowRight, Calendar, Clock, MessageSquare } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { SEO } from "@/components/SEO";
 
 const callDetails = [
   {
@@ -24,6 +25,12 @@ const callDetails = [
 export default function Contact() {
   return (
     <Layout>
+      <SEO
+        title="Contact Baselyne Systems - Schedule a Consulting Call"
+        description="Schedule a 30-minute call to discuss your AI infrastructure, MLOps, or data platform challenges. No sales pitch - just a conversation about your needs."
+        keywords="AI infrastructure consultation, MLOps consulting call, data platform assessment, ML consulting inquiry"
+        canonical="https://baselynesystems.com/contact"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-layer-1 to-layer-2 py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">

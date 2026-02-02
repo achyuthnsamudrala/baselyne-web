@@ -2,6 +2,7 @@ import { ArrowRight, Search, Target, Wrench, CheckCircle2, FileText, Users } fro
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { SEO } from "@/components/SEO";
 
 const phases = [
   {
@@ -75,6 +76,12 @@ const principles = [
 export default function Approach() {
   return (
     <Layout>
+      <SEO
+        title="Our Consulting Approach - How We Deliver AI & MLOps Projects"
+        description="Our structured approach to AI infrastructure and MLOps consulting: from assessment to handover, we deliver production-ready systems with full knowledge transfer."
+        keywords="AI consulting process, MLOps implementation methodology, data infrastructure project delivery, ML platform consulting approach"
+        canonical="https://baselynesystems.com/approach"
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-layer-1 to-layer-2 py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">

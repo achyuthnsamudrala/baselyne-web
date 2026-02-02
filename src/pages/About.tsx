@@ -2,6 +2,7 @@ import { ArrowRight, Building2, Database, Shield, Users, Zap } from "lucide-reac
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
+import { SEO, organizationSchema } from "@/components/SEO";
 
 const experience = [
   {
@@ -33,6 +34,13 @@ const experience = [
 export default function About() {
   return (
     <Layout>
+      <SEO
+        title="About Baselyne Systems - AI & Data Infrastructure Consulting Experts"
+        description="Baselyne Systems is a founder-led AI infrastructure consulting firm with experience from Meta and Alphabet. We help teams build production-grade ML and data systems."
+        keywords="AI infrastructure consulting firm, MLOps consultants, data engineering experts, ML platform consulting, machine learning infrastructure company"
+        canonical="https://baselynesystems.com/about"
+        structuredData={organizationSchema}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-layer-1 to-layer-2 py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">

@@ -11,9 +11,9 @@ const navigation = {
     { name: "Contact", href: "/contact" },
   ],
   services: [
-    { name: "Data Infrastructure", href: "/services#data-infrastructure" },
-    { name: "MLOps & Model Platforms", href: "/services#mlops" },
-    { name: "AI Platform Engineering", href: "/services#ai-platform" },
+    { name: "Data Infrastructure", href: "/services/data-infrastructure-consulting" },
+    { name: "MLOps", href: "/services/mlops-consulting" },
+    { name: "AI Infrastructure", href: "/services/ai-infrastructure-consulting" },
   ],
 };
 

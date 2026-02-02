@@ -1,7 +1,9 @@
 import { ArrowRight, Database, GitBranch, Shield, Cpu, BarChart3, Lock, Workflow, Server, Gauge } from "lucide-react";
+import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent, CardHeader, CardTitle } from "@/components/ui/card";
+import { SEO, professionalServiceSchema } from "@/components/SEO";
 
 const services = [
   {
@@ -9,6 +11,7 @@ const services = [
     title: "Data Infrastructure",
     subtitle: "Build the foundation for reliable data at scale",
     description: "Large-scale data platforms need more than a good schema. They need operational maturity: clear ownership, automated quality checks, and recovery procedures that work at 3am.",
+    link: "/services/data-infrastructure-consulting",
     capabilities: [
       {
         icon: Database,
@@ -32,6 +35,7 @@ const services = [
     title: "MLOps & Model Platforms",
     subtitle: "Get models from notebooks to production",
     description: "The gap between a working model and a production service is larger than most teams expect. We bridge that gap with infrastructure that handles versioning, deployment, and monitoring.",
+    link: "/services/mlops-consulting",
     capabilities: [
       {
         icon: GitBranch,
@@ -51,10 +55,11 @@ const services = [
     ],
   },
   {
-    id: "ai-platform",
-    title: "AI Platform Engineering",
+    id: "ai-infrastructure",
+    title: "AI Infrastructure",
     subtitle: "Scalable compute with cost control",
     description: "GPU costs can spiral without proper controls. We build platforms that give teams the compute they need while maintaining visibility and control over spend.",
+    link: "/services/ai-infrastructure-consulting",
     capabilities: [
       {
         icon: Cpu,
@@ -78,6 +83,13 @@ const services = [
 export default function Services() {
   return (
     <Layout>
+      <SEO
+        title="AI, MLOps & Data Infrastructure Consulting Services"
+        description="Expert consulting for AI infrastructure, MLOps, and data platforms. We design, build, and operate production-grade systems for data and ML teams at scale."
+        keywords="AI infrastructure consulting, MLOps consulting, data infrastructure consulting, ML platform consulting, machine learning consulting services, data engineering consulting"
+        canonical="https://baselynesystems.com/services"
+        structuredData={professionalServiceSchema}
+      />
       {/* Hero */}
       <section className="bg-gradient-to-b from-layer-1 to-layer-2 py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
@@ -108,6 +120,12 @@ export default function Services() {
                 {service.subtitle}
               </h2>
               <p className="mt-4 text-muted-foreground">{service.description}</p>
+              <Button asChild variant="outline" className="mt-6">
+                <Link to={service.link} className="inline-flex items-center gap-2">
+                  Learn more about {service.title}
+                  <ArrowRight className="h-4 w-4" />
+                </Link>
+              </Button>
             </div>
 
             <div className="grid gap-6 md:grid-cols-3">

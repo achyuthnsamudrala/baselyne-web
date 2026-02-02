@@ -3,37 +3,38 @@ import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { Layout } from "@/components/Layout";
+import { SEO, organizationSchema, professionalServiceSchema } from "@/components/SEO";
 
 const failurePoints = [
   {
     icon: Database,
     title: "Data platforms not AI-ready",
-    description: "Legacy warehouses built for BI, not ML. No feature stores, vector support, or real-time capabilities.",
+    description: "Batch pipelines built for dashboards. No real-time access for models, vector support for RAG, or semantic layers for agents.",
   },
   {
     icon: Layers,
-    title: "Fragmented data pipelines",
-    description: "Dozens of ETL jobs with no ownership. Data quality issues propagate silently to downstream models.",
+    title: "RAG retrieval doesn't work",
+    description: "Embeddings are stale, chunking is wrong, retrieval returns irrelevant results. No way to debug why AI outputs are poor.",
   },
   {
     icon: Clock,
-    title: "Models stuck in notebooks",
-    description: "Months of iteration that never reach production. No clear path from experiment to deployment.",
+    title: "AI stuck in prototypes",
+    description: "Months of iteration that never reach production. No clear path from notebook or demo to deployed system.",
   },
   {
     icon: TrendingDown,
-    title: "Runaway cloud costs",
-    description: "GPU and storage spend scales faster than value. No visibility into cost per pipeline or inference.",
+    title: "Runaway AI costs",
+    description: "LLM and GPU spend scales faster than value. No visibility into cost per model, pipeline, or use case.",
   },
   {
     icon: AlertTriangle,
-    title: "Silent degradation",
-    description: "No monitoring for data drift, schema changes, or latency spikes. Problems surface as customer complaints.",
+    title: "Silent failures",
+    description: "No monitoring for drift, latency spikes, or quality degradation. Problems surface as customer complaints.",
   },
   {
     icon: Shield,
-    title: "Compliance gaps",
-    description: "Data lineage unclear. Access controls inconsistent. GDPR or SOC2 requests become fire drills.",
+    title: "Governance gaps",
+    description: "No audit trail for AI decisions. Data lineage unclear. Access controls don't extend to AI systems.",
   },
   {
     icon: Search,
@@ -42,7 +43,7 @@ const failurePoints = [
   },
   {
     icon: Zap,
-    title: "LLM inference at scale",
+    title: "LLM infrastructure at scale",
     description: "GPU provisioning, model serving, and latency optimization require deep infrastructure expertise most teams lack.",
   },
 ];
@@ -50,29 +51,41 @@ const failurePoints = [
 const outcomes = [
   {
     icon: Layers,
-    title: "Production-grade pipelines",
-    description: "Data infrastructure that handles petabyte-scale workloads with proper observability and governance.",
+    title: "AI-ready data",
+    description: "Real-time pipelines, vector infrastructure, and semantic layers that power both analytics and AI.",
   },
   {
     icon: Cpu,
-    title: "Reliable model deployment",
-    description: "Models in production with monitoring, rollback capabilities, and defined SLOs.",
+    title: "Reliable AI deployment",
+    description: "Models and AI systems in production with monitoring, rollback capabilities, and defined SLOs.",
   },
   {
     icon: Database,
-    title: "Cost-controlled compute",
-    description: "Right-sized infrastructure with clear cost attribution and automated scaling policies.",
+    title: "Cost-controlled infrastructure",
+    description: "Right-sized compute with clear cost attribution per team, model, and use case.",
   },
   {
     icon: CheckCircle2,
     title: "Operational maturity",
-    description: "On-call runbooks, incident response, and the documentation you need for audits.",
+    description: "Observability, incident response, and the audit trails you need for compliance.",
   },
 ];
 
 export default function Home() {
+  const combinedSchema = {
+    "@context": "https://schema.org",
+    "@graph": [organizationSchema, professionalServiceSchema],
+  };
+
   return (
     <Layout>
+      <SEO
+        title="AI Infrastructure & MLOps Consulting | Baselyne Systems"
+        description="Expert AI infrastructure, MLOps, and data infrastructure consulting. We help data and ML teams move AI from experimentation into production with reliable, secure, and cost-controlled infrastructure."
+        keywords="AI infrastructure consulting, MLOps consulting, data infrastructure consulting, ML platform, machine learning infrastructure, AI consulting firm, data engineering consulting"
+        canonical="https://baselynesystems.com"
+        structuredData={combinedSchema}
+      />
       {/* Hero Section */}
       <section className="relative overflow-hidden bg-gradient-to-b from-layer-1 to-layer-2">
         <div className="absolute inset-0 bg-[linear-gradient(to_right,hsl(var(--border))_1px,transparent_1px),linear-gradient(to_bottom,hsl(var(--border))_1px,transparent_1px)] bg-[size:4rem_4rem] opacity-30" />
@@ -193,7 +206,7 @@ export default function Home() {
                 </p>
               </div>
               <div className="rounded-lg border border-border bg-card p-6">
-                <h3 className="font-semibold text-foreground">AI Platform Engineering</h3>
+                <h3 className="font-semibold text-foreground">AI Infrastructure</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
                   Scalable compute, cost control, and security for GPU-intensive workloads.
                 </p>
