@@ -1,4 +1,4 @@
-import { ArrowRight, Building2, Database, Shield, Users, Zap } from "lucide-react";
+import { ArrowRight, Building2, Database, Linkedin, Shield, Users, Zap } from "lucide-react";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -79,6 +79,15 @@ export default function About() {
               <p>
                 We take that experience and apply it to companies at earlier stages, helping them build infrastructure that will scale with their ambitions rather than becoming a bottleneck.
               </p>
+              <a
+                href="https://www.linkedin.com/in/achyuthsamudrala/"
+                target="_blank"
+                rel="noopener noreferrer"
+                className="mt-6 inline-flex items-center gap-2 text-primary transition-colors hover:text-primary/80"
+              >
+                <Linkedin className="h-5 w-5" />
+                <span>Connect with the founder on LinkedIn</span>
+              </a>
             </div>
           </div>
         </div>

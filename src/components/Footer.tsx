@@ -1,5 +1,5 @@
 import { Link } from "react-router-dom";
-import { ArrowRight } from "lucide-react";
+import { ArrowRight, Linkedin } from "lucide-react";
 import { Button } from "@/components/ui/button";
 import logo from "@/assets/baselyne-logo.jpg";
 
@@ -56,6 +56,15 @@ export function Footer() {
             <p className="mt-4 max-w-sm text-sm text-muted-foreground">
               AI infrastructure, data engineering, and MLOps consulting. We design, build, and operate production-grade data platforms and AI systems.
             </p>
+            <a
+              href="https://www.linkedin.com/in/achyuthsamudrala/"
+              target="_blank"
+              rel="noopener noreferrer"
+              className="mt-4 inline-flex items-center gap-2 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <Linkedin className="h-5 w-5" />
+              <span>Connect on LinkedIn</span>
+            </a>
           </div>
 
           <div>

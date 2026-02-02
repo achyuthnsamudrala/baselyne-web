@@ -67,7 +67,7 @@ export const organizationSchema = {
   logo: "https://baselynesystems.com/logo.png",
   description:
     "AI infrastructure and MLOps consulting firm helping data and ML teams move AI from experimentation into production.",
-  sameAs: [],
+  sameAs: ["https://www.linkedin.com/in/achyuthsamudrala/"],
   contactPoint: {
     "@type": "ContactPoint",
     contactType: "sales",
