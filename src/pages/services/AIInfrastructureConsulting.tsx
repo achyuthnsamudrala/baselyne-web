@@ -14,9 +14,9 @@ const capabilities = [
   },
   {
     icon: Gauge,
-    title: "Cost Attribution & Control",
+    title: "Cost Visibility & Control",
     description:
-      "Clear visibility into cost per team, project, and model. Budgets, alerts, and optimization recommendations before costs spiral.",
+      "Clear visibility into cost per project and model. Budgets, alerts, and optimization recommendations before costs spiral.",
   },
   {
     icon: Lock,
@@ -42,7 +42,7 @@ const outcomes = [
   "GPU utilization increased from 30% to 80%+",
   "LLM costs reduced 50-80% through optimization",
   "Inference latency optimized for production SLAs",
-  "Clear cost attribution per team, project, and model",
+  "Clear cost attribution per project and model",
   "Security and compliance requirements met on first audit",
   "Team self-service for AI resources without bottlenecks",
 ];

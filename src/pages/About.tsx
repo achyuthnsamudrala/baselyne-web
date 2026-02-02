@@ -49,7 +49,7 @@ export default function About() {
               About Baselyne Systems
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
-              A founder-led consultancy focused on AI infrastructure, data engineering, and MLOps. We bring large-scale engineering experience to companies building production ML systems.
+              A founder-led consultancy focused on AI infrastructure, data engineering, and MLOps. We bring deep engineering experience to teams building production ML systems.
             </p>
           </div>
         </div>
@@ -101,7 +101,7 @@ export default function About() {
               Operating Experience
             </p>
             <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
-              Engineering credibility at scale
+              Engineering credibility that transfers
             </h2>
           </div>
 
@@ -141,7 +141,7 @@ export default function About() {
                 The goal is never to be clever. It's to build systems that are boring in the best way: predictable, observable, and recoverable. Systems that let your team sleep through the night and focus on work that matters.
               </p>
               <p>
-                We're selective about the engagements we take on. We work best with teams that have real problems at scale, leadership that understands the value of infrastructure investment, and engineers who want to learn and own what we build together.
+                We're selective about the engagements we take on. We work best with teams that have real infrastructure challenges, leadership that understands the value of doing it right, and engineers who want to learn and own what we build together.
               </p>
             </div>
           </div>

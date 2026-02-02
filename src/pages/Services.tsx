@@ -9,8 +9,8 @@ const services = [
   {
     id: "data-infrastructure",
     title: "Data Infrastructure",
-    subtitle: "Build the foundation for reliable data at scale",
-    description: "Large-scale data platforms need more than a good schema. They need operational maturity: clear ownership, automated quality checks, and recovery procedures that work at 3am.",
+    subtitle: "Build the foundation for reliable data",
+    description: "Production data platforms need more than a good schema. They need operational maturity: clear ownership, automated quality checks, and recovery procedures that work at 3am.",
     link: "/services/data-infrastructure-consulting",
     capabilities: [
       {
@@ -68,8 +68,8 @@ const services = [
       },
       {
         icon: Gauge,
-        title: "Cost Attribution",
-        description: "Clear visibility into cost per team, project, and model. Budgets and alerts before you get a surprise bill.",
+        title: "Cost Visibility",
+        description: "Clear visibility into cost per project and model. Budgets and alerts before you get a surprise bill.",
       },
       {
         icon: Lock,
@@ -85,7 +85,7 @@ export default function Services() {
     <Layout>
       <SEO
         title="AI, MLOps & Data Infrastructure Consulting Services"
-        description="Expert consulting for AI infrastructure, MLOps, and data platforms. We design, build, and operate production-grade systems for data and ML teams at scale."
+        description="Expert consulting for AI infrastructure, MLOps, and data platforms. We design, build, and operate production-grade systems for data and ML teams."
         keywords="AI infrastructure consulting, MLOps consulting, data infrastructure consulting, ML platform consulting, machine learning consulting services, data engineering consulting"
         canonical="https://baselynesystems.com/services"
         structuredData={professionalServiceSchema}
@@ -98,7 +98,7 @@ export default function Services() {
               Services
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
-              We design, build, and operate production-grade data platforms and AI systems. Each engagement is scoped to your specific challenges and delivered by engineers who've built these systems at scale.
+              We design, build, and operate production-grade data platforms and AI systems. Each engagement is scoped to your specific challenges and delivered by engineers who've built these systems at companies like Meta and Alphabet.
             </p>
           </div>
         </div>

@@ -82,8 +82,8 @@ export const professionalServiceSchema = {
   name: "Baselyne Systems",
   url: "https://baselynesystems.com",
   description:
-    "Expert AI infrastructure, MLOps, and data infrastructure consulting services for enterprise teams.",
-  priceRange: "$$$$",
+    "Expert AI infrastructure, MLOps, and data infrastructure consulting services for data and ML teams.",
+  priceRange: "$$$",
   areaServed: {
     "@type": "Country",
     name: "United States",
@@ -116,7 +116,7 @@ export const professionalServiceSchema = {
           "@type": "Service",
           name: "Data Infrastructure Consulting",
           description:
-            "Lakehouse architecture, pipeline orchestration, and data governance at scale.",
+            "Lakehouse architecture, pipeline orchestration, and data governance for production systems.",
         },
       },
     ],
@@ -134,7 +134,7 @@ export const aiInfraServiceSchema = {
     url: "https://baselynesystems.com",
   },
   description:
-    "Expert consulting for building scalable AI infrastructure including GPU orchestration, cost optimization, and security compliance for enterprise AI workloads.",
+    "Expert consulting for building production AI infrastructure including GPU orchestration, cost optimization, and security compliance.",
   serviceType: "Consulting",
   areaServed: "United States",
   url: "https://baselynesystems.com/services/ai-infrastructure-consulting",
