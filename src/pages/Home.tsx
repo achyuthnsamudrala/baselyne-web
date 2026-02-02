@@ -136,7 +136,7 @@ export default function Home() {
           <div className="mx-auto max-w-2xl text-center">
             <p className="text-sm font-medium uppercase tracking-wider text-primary">Common Failure Points</p>
             <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
-              Where AI infrastructure breaks down
+              Where AI projects get stuck
             </h2>
             <p className="mt-4 text-muted-foreground">
               Most teams don't lack ML talent. They lack the infrastructure to make that talent effective at scale.
