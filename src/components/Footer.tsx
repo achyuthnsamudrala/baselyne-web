@@ -104,6 +104,9 @@ export function Footer() {
           <p className="text-center text-sm text-muted-foreground">
             © {new Date().getFullYear()} Baselyne Systems. All rights reserved.
           </p>
+          <p className="mt-2 text-center text-xs text-muted-foreground/70">
+            Baselyne Systems is a trading name of Baseline AI Systems Limited, registered in England and Wales.
+          </p>
         </div>
       </div>
     </footer>
