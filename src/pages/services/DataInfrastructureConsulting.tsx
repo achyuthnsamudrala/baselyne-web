@@ -76,7 +76,7 @@ export default function DataInfrastructureConsulting() {
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg">
                 <a
-                  href="https://calendly.com/achyuth-1995/30min"
+                  href="https://calendly.com/baselyne-systems/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2"
@@ -203,7 +203,7 @@ export default function DataInfrastructureConsulting() {
             </p>
             <Button asChild size="lg" className="mt-8">
               <a
-                href="https://calendly.com/achyuth-1995/30min"
+                href="https://calendly.com/baselyne-systems/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"

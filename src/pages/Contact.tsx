@@ -91,7 +91,7 @@ export default function Contact() {
                   </p>
                   <Button asChild size="lg" className="mt-8 w-full">
                     <a
-                      href="https://calendly.com/achyuth-1995/30min"
+                      href="https://calendly.com/baselyne-systems/30min"
                       target="_blank"
                       rel="noopener noreferrer"
                       className="inline-flex items-center justify-center gap-2"
@@ -145,7 +145,7 @@ export default function Contact() {
             </p>
             <Button asChild size="lg" className="mt-8">
               <a
-                href="https://calendly.com/achyuth-1995/30min"
+                href="https://calendly.com/baselyne-systems/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"

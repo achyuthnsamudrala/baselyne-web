@@ -42,7 +42,7 @@ export function Header() {
           ))}
           <Button asChild className="ml-4">
             <a
-              href="https://calendly.com/achyuth-1995/30min"
+              href="https://calendly.com/baselyne-systems/30min"
               target="_blank"
               rel="noopener noreferrer"
             >
@@ -77,7 +77,7 @@ export function Header() {
               ))}
               <Button asChild className="mt-4">
                 <a
-                  href="https://calendly.com/achyuth-1995/30min"
+                  href="https://calendly.com/baselyne-systems/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                 >
