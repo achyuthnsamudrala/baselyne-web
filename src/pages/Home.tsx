@@ -8,7 +8,7 @@ import { TypewriterText } from "@/components/TypewriterText";
 
 const heroTaglines = [
   "AI and data systems that actually run in production.",
-  "Data infrastructure that scales with your ambitions.",
+  "Data infra that scales with your ambitions.",
   "MLOps that gets models out of notebooks.",
   "AI infrastructure without the runaway costs.",
 ];
@@ -102,7 +102,7 @@ export default function Home() {
             <h1 className="text-4xl font-bold tracking-tight text-foreground sm:text-5xl lg:text-6xl min-h-[4.8em] sm:min-h-[3.6em] lg:min-h-[3em]">
               <TypewriterText
                 texts={heroTaglines}
-                typingSpeed={70}
+                typingSpeed={100}
                 deletingSpeed={40}
                 pauseDuration={4000}
               />
