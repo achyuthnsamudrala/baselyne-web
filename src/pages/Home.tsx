@@ -20,11 +20,6 @@ const failurePoints = [
     description: "Batch pipelines built for dashboards. No real-time access for models, vector support for RAG, or semantic layers for agents.",
   },
   {
-    icon: Layers,
-    title: "RAG retrieval doesn't work",
-    description: "Embeddings are stale, chunking is wrong, retrieval returns irrelevant results. No way to debug why AI outputs are poor.",
-  },
-  {
     icon: Clock,
     title: "AI stuck in prototypes",
     description: "Months of iteration that never reach production. No clear path from notebook or demo to deployed system.",
@@ -38,6 +33,11 @@ const failurePoints = [
     icon: AlertTriangle,
     title: "Silent failures",
     description: "No monitoring for drift, latency spikes, or quality degradation. Problems surface as customer complaints.",
+  },
+  {
+    icon: Layers,
+    title: "RAG retrieval doesn't work",
+    description: "Embeddings are stale, chunking is wrong, retrieval returns irrelevant results. No way to debug why AI outputs are poor.",
   },
   {
     icon: Shield,
