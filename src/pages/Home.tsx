@@ -51,7 +51,7 @@ const failurePoints = [
   },
   {
     icon: Zap,
-    title: "Production LLM infrastructure",
+    title: "Infrastructure requires specialists",
     description: "GPU provisioning, model serving, and latency optimization require deep infrastructure expertise most teams lack.",
   },
 ];

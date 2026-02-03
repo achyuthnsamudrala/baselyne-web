@@ -1,4 +1,4 @@
-import { ArrowRight, Cpu, Gauge, Lock, Server, Zap, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Cpu, Gauge, Lock, Zap, CheckCircle2 } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -23,12 +23,6 @@ const capabilities = [
     title: "Security & Compliance",
     description:
       "Network isolation, secrets management, and audit logging. Infrastructure that passes security reviews the first time.",
-  },
-  {
-    icon: Server,
-    title: "LLM Serving Infrastructure",
-    description:
-      "Production-grade infrastructure for serving LLMs. vLLM, TensorRT-LLM, or managed endpoints—optimized for your latency and cost requirements.",
   },
   {
     icon: Zap,
