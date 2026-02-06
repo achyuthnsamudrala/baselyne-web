@@ -10,35 +10,35 @@ const capabilities = [
     icon: Cpu,
     title: "GPU Orchestration",
     description:
-      "Kubernetes-based platforms for training and inference. Right-sized clusters with autoscaling that responds to actual demand.",
+      "Kubernetes with the NVIDIA GPU Operator and time-sliced MIG for fractional GPU allocation. Cluster autoscaler configured for GPU-aware scaling with appropriate spin-up tolerances—not the defaults, which are calibrated for CPU workloads and too slow for bursty inference.",
   },
   {
     icon: Gauge,
     title: "Cost Visibility & Control",
     description:
-      "Clear visibility into cost per project and model. Budgets, alerts, and optimization recommendations before costs spiral.",
+      "OpenCost or Kubecost for per-namespace cost attribution, broken down to the model and use case level. Spot instances with training checkpointing for 60-70% savings. Reserved capacity for serving, with automated right-sizing based on actual GPU utilization percentiles.",
   },
   {
     icon: Lock,
     title: "Security & Compliance",
     description:
-      "Network isolation, secrets management, and audit logging. Infrastructure that passes security reviews the first time.",
+      "Kubernetes NetworkPolicies isolating GPU workloads by team. Secrets injected at runtime via external-secrets-operator, not baked into container images. Audit logging that captures who deployed what model, trained on what data, to satisfy security reviews and compliance audits.",
   },
   {
     icon: Zap,
     title: "AI Observability",
     description:
-      "Tracing, logging, and monitoring for AI systems. Debug failures, track behavior, and understand why models perform the way they do.",
+      "NVIDIA DCGM metrics for GPU health and utilization. Application-level tracing for inference requests through the full serving stack. Token-level cost tracking for LLM workloads so you can attribute spend to specific features and customers, not just 'the AI line item.'",
   },
 ];
 
 const outcomes = [
-  "GPU utilization increased from 30% to 80%+",
-  "LLM costs reduced 50-80% through optimization",
-  "Inference latency optimized for production SLAs",
-  "Clear cost attribution per project and model",
-  "Security and compliance requirements met on first audit",
-  "Team self-service for AI resources without bottlenecks",
+  "GPU utilization increased from 30% to 80%+ through fractional allocation and autoscaling",
+  "LLM inference costs reduced 50-80% through quantization and batching optimization",
+  "Inference latency SLAs met with properly tuned serving infrastructure",
+  "Per-model, per-team cost attribution replacing opaque GPU line items",
+  "Security audit passed on first attempt with proper isolation and audit logging",
+  "ML teams self-serving GPU resources without infrastructure team as bottleneck",
 ];
 
 export default function AIInfrastructureConsulting() {
@@ -99,21 +99,25 @@ export default function AIInfrastructureConsulting() {
             </h2>
             <div className="mt-8 space-y-6 text-muted-foreground">
               <p>
-                Most teams start AI projects with managed APIs or a few GPUs.
-                As usage grows, so do problems: costs spike unpredictably,
-                GPU utilization hovers at 30%, and there's no visibility into
-                what's driving spend or why systems fail.
+                Most teams start with a few on-demand GPU instances or managed
+                API calls. When usage grows, the problems compound: GPU
+                utilization sits around 30% because workloads are bursty but
+                instances run 24/7. There's no cost attribution, so one team's
+                expensive training run is indistinguishable from another's
+                lightweight inference. OOM errors crash jobs silently.
               </p>
               <p>
-                The transition from prototypes to production AI requires
-                infrastructure expertise that most teams lack. Self-hosted
-                models, GPU orchestration, LLM serving, cost attribution—each
-                domain has its own complexity.
+                The fix isn't just provisioning more GPUs. It's cluster
+                autoscaling tuned for GPU spin-up latency, fractional GPU
+                allocation so inference workloads don't waste a full A100, spot
+                instance strategies that save 60-70% on training without losing
+                work, and monitoring that distinguishes between GPU memory
+                pressure and actual compute saturation.
               </p>
               <p>
-                We've built and operated AI infrastructure at Meta and other
-                large-scale environments. We bring that experience to help you
-                build systems that are production-ready from day one.
+                We've operated GPU infrastructure at scale where utilization
+                and cost control weren't optional—they were the difference
+                between a viable product and an unsustainable cost center.
               </p>
             </div>
           </div>

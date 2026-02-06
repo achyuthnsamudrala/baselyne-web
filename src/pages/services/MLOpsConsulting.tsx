@@ -10,41 +10,41 @@ const capabilities = [
     icon: GitBranch,
     title: "Model & Prompt Versioning",
     description:
-      "Version control for models, prompts, and configurations. Track what changed, when, and why. Roll back to any previous version instantly.",
+      "MLflow for model registry and experiment tracking—it's the closest thing to a standard. Git for prompt templates and configuration. The real value is the evaluation pipeline wired into CI: every model and prompt change runs against a held-out set before it can be promoted.",
   },
   {
     icon: Server,
     title: "Deployment Infrastructure",
     description:
-      "Serving infrastructure for ML models and LLM applications. Canary deployments, A/B testing, shadow mode, and automated rollback.",
+      "vLLM for LLM serving—continuous batching, KV-cache management, and quantized inference out of the box. For traditional ML, a straightforward FastAPI or Triton service behind a Kubernetes autoscaler. We avoid heavy frameworks like KServe or Seldon unless you need multi-model routing.",
   },
   {
     icon: BarChart3,
     title: "Evaluation & Monitoring",
     description:
-      "Automated evaluation pipelines for model quality. Track accuracy, latency, cost, and drift. Catch regressions before users do.",
+      "Automated evaluation runs on every model change: accuracy on held-out data, latency benchmarks, cost estimates. In production, prediction distribution monitoring catches drift before ground truth labels exist. We alert on distribution shifts, not just endpoint health.",
   },
   {
     icon: Workflow,
     title: "ML Pipeline Orchestration",
     description:
-      "Automated training and inference pipelines. Scheduled retraining, data validation, model evaluation gates, and workflow management.",
+      "Dagster or Airflow for training pipelines with data validation checks at ingestion, feature computation with point-in-time correctness, and evaluation gates before promotion. Retraining triggered by data freshness or drift signals, not arbitrary cron schedules.",
   },
   {
     icon: RefreshCw,
     title: "Continuous Improvement",
     description:
-      "Feedback loops from production to development. Capture failures, evaluate alternatives, and deploy improvements with confidence.",
+      "Structured feedback collection from production—failed predictions, user corrections, low-confidence outputs—routed back into evaluation datasets. A/B testing infrastructure to compare model versions on live traffic with statistical rigor, not eyeballing dashboards.",
   },
 ];
 
 const outcomes = [
-  "Deployment time reduced from weeks to hours",
-  "Zero-downtime deployments with automated rollbacks",
-  "Regressions caught in evaluation before production",
-  "Full lineage from training data to production predictions",
-  "Reproducible configurations with version control",
-  "Self-service deployment for ML and AI teams",
+  "Model deployment reduced from weeks to hours with evaluation-gated CI/CD",
+  "Zero-downtime deployments with canary analysis and automated rollback",
+  "Regressions caught by evaluation pipeline before reaching production traffic",
+  "Full lineage from training data through feature computation to serving",
+  "Reproducible model configurations versioned alongside code",
+  "ML teams deploying independently without infrastructure bottlenecks",
 ];
 
 export default function MLOpsConsulting() {
@@ -106,22 +106,28 @@ export default function MLOpsConsulting() {
             </h2>
             <div className="mt-8 space-y-6 text-muted-foreground">
               <p>
-                Your team has built models that work in development. But getting
-                them into production—with proper versioning, monitoring, and the
-                ability to roll back when things go wrong—is a different
-                challenge entirely.
+                Your team built a model that performs well in a notebook. To get
+                it into production, someone needs to package it into a container,
+                write a serving endpoint, set up health checks, configure
+                autoscaling, build an evaluation pipeline, implement canary
+                deployment logic, and instrument monitoring. That's not ML
+                work—that's infrastructure work.
               </p>
               <p>
-                Most organizations underestimate the operational complexity.
-                Building a working model is maybe 20% of the work. The rest is
-                infrastructure: versioning, evaluation pipelines, serving
-                infrastructure, observability, and processes for continuous
-                improvement.
+                Most teams try to solve this with a platform like Kubeflow or
+                SageMaker. Then they spend months configuring it, fight its
+                opinions about how models should be structured, and end up with
+                a system that's harder to debug than the original problem. The
+                better approach is usually simpler: a model registry, a CI/CD
+                pipeline with evaluation gates, a serving layer you actually
+                understand, and monitoring that catches regressions before users
+                do.
               </p>
               <p>
-                We've built and operated ML systems at Meta and other
-                large-scale environments. We bring that experience to help you
-                build systems that are reliable, observable, and maintainable.
+                We've built ML platforms that serve production traffic at
+                Meta-scale. The lesson from that experience: the best MLOps
+                platform is the smallest one that solves your actual problems,
+                not the most featureful one.
               </p>
             </div>
           </div>

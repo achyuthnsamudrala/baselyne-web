@@ -10,41 +10,41 @@ const capabilities = [
     icon: Database,
     title: "Lakehouse Architecture",
     description:
-      "Modern data platforms on Delta Lake, Iceberg, or Hudi. Designed for analytics, ML training, and AI workloads with governance from day one.",
+      "We default to Apache Iceberg—it's catalog-agnostic, handles schema evolution without rewriting data, and the ecosystem is converging around it. Both analytical queries and ML training reads work against the same tables, with time-travel for reproducible feature extraction.",
   },
   {
     icon: Workflow,
     title: "Real-time & Batch Pipelines",
     description:
-      "Streaming pipelines for real-time AI access alongside batch processing. Sub-second freshness where needed, cost-efficient batch where not.",
+      "CDC pipelines from your operational databases via Debezium, feeding a streaming layer on Kafka or Flink for sub-minute freshness. Batch processing coexists on the same storage layer—the lakehouse format handles both access patterns without separate systems.",
   },
   {
     icon: Shield,
     title: "AI-ready Governance",
     description:
-      "Lineage tracking, access controls, and quality metrics that extend to AI systems. Meet GDPR, SOC2, and HIPAA without slowing down your team.",
+      "Column-level access controls and data quality contracts enforced at pipeline write time—not checked after the fact. Lineage that tracks data from source databases through transformations, embeddings, and model training, so you can answer 'what data went into this model' on demand.",
   },
   {
     icon: Layers,
     title: "Semantic Data Layer",
     description:
-      "Metadata, descriptions, and relationships that make data discoverable and usable—by both humans and AI systems.",
+      "A metadata layer that makes your data discoverable by both analysts writing SQL and AI systems generating embeddings. Descriptions, relationships, and quality metrics attached to datasets—so your RAG pipeline knows what to trust and what to exclude.",
   },
   {
     icon: Search,
     title: "Vector & Hybrid Search",
     description:
-      "Vector stores, embedding pipelines, and hybrid search for RAG and semantic search. Infrastructure that makes retrieval actually work.",
+      "pgvector for teams that already have Postgres and don't need billion-scale similarity search. Dedicated vector databases like Qdrant when you do. Embedding pipelines triggered by CDC events so your vector store reflects current data, not last week's snapshot.",
   },
 ];
 
 const outcomes = [
-  "Data freshness reduced from hours to minutes or seconds",
-  "RAG retrieval accuracy improved through better data modeling",
-  "End-to-end lineage from source data through AI outputs",
-  "Query performance improved 10-100x through optimization",
-  "GDPR/SOC2 compliance with AI-aware controls",
-  "Storage costs reduced 40-60% through intelligent tiering",
+  "CDC pipelines delivering sub-minute data freshness to ML systems",
+  "RAG retrieval precision improved through proper chunking and embedding freshness",
+  "End-to-end lineage from source databases through embeddings and model training",
+  "Query performance improved 10-100x through partition pruning and proper table formats",
+  "Compliance requirements met with column-level access controls and audit trails",
+  "Storage costs reduced 40-60% through Iceberg's compaction and intelligent tiering",
 ];
 
 export default function DataInfrastructureConsulting() {
@@ -105,21 +105,25 @@ export default function DataInfrastructureConsulting() {
             </h2>
             <div className="mt-8 space-y-6 text-muted-foreground">
               <p>
-                Most data platforms were designed for batch analytics and
-                dashboards. Now you need them to power ML models, RAG systems,
-                real-time applications, and AI agents. The architecture that
-                worked for BI often breaks under these new demands.
+                Most data platforms were designed around a nightly ETL that
+                lands Parquet files for Redshift or BigQuery. That works for
+                dashboards. It doesn't work when your ML team needs features
+                computed on data that's less than 10 minutes old, or when your
+                RAG pipeline needs to re-embed documents as they're updated.
               </p>
               <p>
-                AI workloads need fresh data, not overnight ETL. They need
-                vector search and embeddings, not just SQL. They need semantic
-                understanding of your data, not just table schemas. And they
-                need governance that extends to AI systems.
+                The fix isn't bolting a streaming layer onto the side of your
+                batch pipeline. It's rethinking the storage layer—moving to a
+                lakehouse format that supports both batch and incremental reads,
+                adding CDC from your operational databases, and building a
+                semantic layer that makes data discoverable to both analysts and
+                AI systems.
               </p>
               <p>
-                We've built and operated petabyte-scale data platforms at Meta
-                and other large-scale environments. We bring that experience to
-                help you build infrastructure that's ready for modern AI.
+                We've built platforms at this inflection point at Meta—where the
+                same data had to serve dashboards, ML training, and real-time
+                serving with different freshness and access patterns. We know
+                where the abstractions should sit.
               </p>
             </div>
           </div>

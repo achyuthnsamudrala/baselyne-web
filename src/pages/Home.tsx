@@ -17,42 +17,42 @@ const failurePoints = [
   {
     icon: Database,
     title: "Data platforms not AI-ready",
-    description: "Batch pipelines built for dashboards. No real-time access for models, vector support for RAG, or semantic layers for agents.",
+    description: "Your Spark jobs write daily Parquet snapshots to S3. Now your ML team needs feature freshness under 15 minutes and your vector store is stale by hours. The batch architecture that works for dashboards is the bottleneck for everything AI.",
   },
   {
     icon: Clock,
     title: "AI stuck in prototypes",
-    description: "Months of iteration that never reach production. No clear path from notebook or demo to deployed system.",
+    description: "The model works in a Jupyter notebook with pickle files and hardcoded paths. There's no serving infrastructure, no evaluation pipeline, and no way to A/B test. The gap between 'works on my machine' and production is all infrastructure.",
   },
   {
     icon: TrendingDown,
     title: "Runaway AI costs",
-    description: "LLM and GPU spend scales faster than value. No visibility into cost per model, pipeline, or use case.",
+    description: "GPUs sit idle between training runs at 30% utilization. Inference instances are oversized because nobody profiled the workload. There's no per-request cost tracking, so you can't tell which model or use case is driving the bill.",
   },
   {
     icon: AlertTriangle,
     title: "Silent failures",
-    description: "No monitoring for drift, latency spikes, or quality degradation. Problems surface as customer complaints.",
+    description: "Model accuracy degraded 15% over two months and nobody noticed because the only monitoring is 'is the endpoint up.' No tracking for prediction distribution shift, latency percentiles, or input data quality.",
   },
   {
     icon: Layers,
     title: "RAG retrieval doesn't work",
-    description: "Embeddings are stale, chunking is wrong, retrieval returns irrelevant results. No way to debug why AI outputs are poor.",
+    description: "Naive fixed-size chunking with no overlap. Embeddings generated once and never refreshed. No evaluation framework to measure retrieval quality, so you can't tell if a prompt change helped or the context window is just masking bad retrieval.",
   },
   {
     icon: Shield,
     title: "Governance gaps",
-    description: "No audit trail for AI decisions. Data lineage unclear. Access controls don't extend to AI systems.",
+    description: "You can't answer 'what data was this model trained on' or 'who has access to PII in the vector store.' Data lineage stops at the warehouse—nothing tracks how data flows into embeddings, fine-tuning sets, or prompt context.",
   },
   {
     icon: Search,
     title: "Works locally, breaks in prod",
-    description: "Environment mismatches between notebooks, staging, and production. Different results everywhere, impossible to debug.",
+    description: "Different Python versions, different CUDA drivers, feature computation that diverges between training and serving. The model was trained on GPU but served on CPU with different numerical precision, and now the outputs don't match.",
   },
   {
     icon: Zap,
     title: "Infrastructure requires specialists",
-    description: "GPU provisioning, model serving, and latency optimization require deep infrastructure expertise most teams lack.",
+    description: "Your ML engineers are spending weeks fighting CUDA driver mismatches, debugging OOM errors in Kubernetes, and writing custom serving code. That's time not spent on model quality—the thing that actually differentiates your product.",
   },
 ];
 
@@ -60,22 +60,22 @@ const outcomes = [
   {
     icon: Layers,
     title: "AI-ready data",
-    description: "Real-time pipelines, vector infrastructure, and semantic layers that power both analytics and AI.",
+    description: "Lakehouse storage with incremental reads, CDC from operational databases, and embedding pipelines that stay current—not overnight batch jobs feeding yesterday's data to today's models.",
   },
   {
     icon: Cpu,
     title: "Reliable AI deployment",
-    description: "Models and AI systems in production with monitoring, rollback capabilities, and defined SLOs.",
+    description: "Models and LLM applications deployed with evaluation gates, canary rollouts, and automated rollback. Defined SLOs for latency and quality, not just uptime.",
   },
   {
     icon: Database,
     title: "Cost-controlled infrastructure",
-    description: "Right-sized compute with clear cost visibility across models and use cases.",
+    description: "Per-model cost attribution, spot instances for training with checkpointing, right-sized serving infrastructure. You know exactly what each use case costs and why.",
   },
   {
     icon: CheckCircle2,
     title: "Operational maturity",
-    description: "Observability, incident response, and the audit trails you need for compliance.",
+    description: "Prediction distribution monitoring, alerting on data quality shifts, and incident runbooks written by the people who built the system. Your team operates independently from day one of handover.",
   },
 ];
 
@@ -209,19 +209,19 @@ export default function Home() {
               <Link to="/services/data-infrastructure-consulting" className="block rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/50 hover:bg-accent/50">
                 <h3 className="font-semibold text-foreground">Data Infrastructure</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Reliable pipelines, lakehouse platforms, and data governance that grows with you.
+                  Iceberg-based lakehouses, CDC pipelines for sub-minute freshness, and governance that extends through embeddings and model training.
                 </p>
               </Link>
               <Link to="/services/mlops-consulting" className="block rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/50 hover:bg-accent/50">
                 <h3 className="font-semibold text-foreground">MLOps & Model Platforms</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Model deployment, monitoring, and lifecycle management for production workloads.
+                  Evaluation-gated CI/CD, vLLM-based serving, and prediction distribution monitoring that catches drift before users do.
                 </p>
               </Link>
               <Link to="/services/ai-infrastructure-consulting" className="block rounded-lg border border-border bg-card p-6 transition-colors hover:border-primary/50 hover:bg-accent/50">
                 <h3 className="font-semibold text-foreground">AI Infrastructure</h3>
                 <p className="mt-2 text-sm text-muted-foreground">
-                  Scalable compute, cost control, and security for GPU-intensive workloads.
+                  GPU orchestration with fractional allocation, spot-based training with checkpointing, and per-model cost attribution.
                 </p>
               </Link>
             </div>
