@@ -1,4 +1,4 @@
-import { ArrowRight, Database, GitBranch, Shield, Cpu, BarChart3, Lock, Workflow, Server, Gauge } from "lucide-react";
+import { ArrowRight, Database, GitBranch, Shield, Cpu, BarChart3, Lock, Workflow, Server, Gauge, Search, Wrench, Users } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -147,6 +147,73 @@ export default function Services() {
         </section>
       ))}
 
+      {/* How We Work */}
+      <section className="bg-layer-2 py-20 lg:py-28">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="mx-auto max-w-2xl text-center">
+            <p className="text-sm font-medium uppercase tracking-wider text-primary">
+              How We Work
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
+              Three ways to engage
+            </h2>
+            <p className="mt-4 text-muted-foreground">
+              Every engagement starts with a conversation about your specific
+              challenges. From there, we match the right model to your situation.
+            </p>
+          </div>
+
+          <div className="mt-16 grid gap-6 md:grid-cols-3">
+            <Card className="border-border/50 bg-card">
+              <CardContent className="p-6">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <Search className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="mt-4 font-semibold text-foreground">Assessment</h3>
+                <p className="mt-1 text-xs font-medium text-primary">2–4 weeks</p>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  We audit your current architecture, identify bottlenecks and
+                  risks, and deliver a prioritized roadmap with specific
+                  recommendations. You get a clear picture of what to fix first
+                  and why.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 bg-card">
+              <CardContent className="p-6">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <Wrench className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="mt-4 font-semibold text-foreground">Implementation</h3>
+                <p className="mt-1 text-xs font-medium text-primary">6–12 weeks</p>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  Scoped projects with defined deliverables. We design, build,
+                  and hand off production-ready infrastructure—with documentation
+                  and knowledge transfer so your team can operate it independently.
+                </p>
+              </CardContent>
+            </Card>
+
+            <Card className="border-border/50 bg-card">
+              <CardContent className="p-6">
+                <div className="flex h-10 w-10 items-center justify-center rounded-lg bg-primary/10">
+                  <Users className="h-5 w-5 text-primary" />
+                </div>
+                <h3 className="mt-4 font-semibold text-foreground">Advisory Retainer</h3>
+                <p className="mt-1 text-xs font-medium text-primary">Ongoing</p>
+                <p className="mt-3 text-sm text-muted-foreground">
+                  For teams that want ongoing access to expert guidance. Monthly
+                  retainer for architecture reviews, design consultations, and
+                  technical advisory as your systems evolve—your team builds, we
+                  advise.
+                </p>
+              </CardContent>
+            </Card>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-layer-3 py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
@@ -155,7 +222,9 @@ export default function Services() {
               Not sure where to start?
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Every infrastructure challenge is different. Let's discuss your specific situation and identify the highest-impact improvements.
+              Most engagements start with a 30-minute call to understand your
+              current stack and challenges. No pitch deck—just a technical
+              conversation about what's not working and what would.
             </p>
             <Button asChild size="lg" className="mt-8">
               <a

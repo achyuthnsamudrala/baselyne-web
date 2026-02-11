@@ -194,6 +194,61 @@ export default function DataInfrastructureConsulting() {
         </div>
       </section>
 
+      {/* How We Engage */}
+      <section className="bg-layer-1 py-20 lg:py-28">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-wider text-primary">
+              How We Engage
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
+              What working with us looks like
+            </h2>
+            <div className="mt-10 space-y-8">
+              <div className="flex gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                  1
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Architecture review</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    We map your current data flows, identify bottlenecks, and
+                    assess readiness for the workloads you're planning. Typically
+                    2–3 weeks, delivered as a prioritized roadmap.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                  2
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Build & migrate</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    We implement the highest-priority changes—lakehouse migration,
+                    CDC setup, governance layer—in focused sprints. Most data
+                    infrastructure projects run 8–12 weeks.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                  3
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Handoff & advise</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    We hand off with full documentation and runbooks so your team
+                    operates independently. Optional advisory retainer for
+                    architecture guidance as your data needs grow.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-layer-3 py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
@@ -202,8 +257,9 @@ export default function DataInfrastructureConsulting() {
               Ready to modernize your data platform?
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Schedule a call to discuss your data infrastructure challenges
-              and goals.
+              Most engagements start with a 30-minute call to understand your
+              current stack and where the bottlenecks are. No pitch
+              deck—just a technical conversation.
             </p>
             <Button asChild size="lg" className="mt-8">
               <a

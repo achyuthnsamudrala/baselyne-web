@@ -188,6 +188,62 @@ export default function AIInfrastructureConsulting() {
         </div>
       </section>
 
+      {/* How We Engage */}
+      <section className="bg-layer-1 py-20 lg:py-28">
+        <div className="container mx-auto px-4 lg:px-8">
+          <div className="mx-auto max-w-3xl">
+            <p className="text-sm font-medium uppercase tracking-wider text-primary">
+              How We Engage
+            </p>
+            <h2 className="mt-3 text-3xl font-semibold text-foreground sm:text-4xl">
+              What working with us looks like
+            </h2>
+            <div className="mt-10 space-y-8">
+              <div className="flex gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                  1
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Infrastructure audit</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    We profile your GPU utilization, cost breakdown, and serving
+                    performance. You get a clear picture of what's wasted, what's
+                    at risk, and what to prioritize. Typically 1–2 weeks.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                  2
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Optimize & build</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    We implement the highest-impact changes—autoscaling tuning,
+                    fractional GPU allocation, cost attribution, security
+                    hardening. Most AI infrastructure projects run 4–8 weeks.
+                  </p>
+                </div>
+              </div>
+              <div className="flex gap-4">
+                <div className="flex h-8 w-8 shrink-0 items-center justify-center rounded-full bg-primary/10 text-sm font-semibold text-primary">
+                  3
+                </div>
+                <div>
+                  <h3 className="font-semibold text-foreground">Handoff & advise</h3>
+                  <p className="mt-1 text-sm text-muted-foreground">
+                    Your platform team gets full ownership with runbooks and
+                    dashboards. Optional advisory retainer for architecture
+                    guidance and optimization reviews as your workload mix
+                    changes.
+                  </p>
+                </div>
+              </div>
+            </div>
+          </div>
+        </div>
+      </section>
+
       {/* CTA */}
       <section className="bg-layer-3 py-20 lg:py-28">
         <div className="container mx-auto px-4 lg:px-8">
@@ -196,8 +252,9 @@ export default function AIInfrastructureConsulting() {
               Ready to optimize your AI infrastructure?
             </h2>
             <p className="mt-4 text-muted-foreground">
-              Schedule a call to discuss your GPU workloads, cost challenges,
-              and infrastructure goals.
+              Most engagements start with a 30-minute call to understand your
+              GPU workloads and cost profile. No pitch deck—just a technical
+              conversation.
             </p>
             <Button asChild size="lg" className="mt-8">
               <a
