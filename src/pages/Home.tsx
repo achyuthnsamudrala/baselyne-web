@@ -1,4 +1,4 @@
-import { ArrowRight, AlertTriangle, CheckCircle2, Database, Layers, Shield, Cpu, TrendingDown, Clock, Search, Zap } from "lucide-react";
+import { ArrowRight, AlertTriangle, CheckCircle2, Database, Layers, Cpu, TrendingDown, Clock } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
@@ -33,26 +33,6 @@ const failurePoints = [
     icon: AlertTriangle,
     title: "Silent failures",
     description: "Model accuracy degraded 15% over two months and nobody noticed because the only monitoring is 'is the endpoint up.' No tracking for prediction distribution shift, latency percentiles, or input data quality.",
-  },
-  {
-    icon: Layers,
-    title: "RAG retrieval doesn't work",
-    description: "Naive fixed-size chunking with no overlap. Embeddings generated once and never refreshed. No evaluation framework to measure retrieval quality, so you can't tell if a prompt change helped or the context window is just masking bad retrieval.",
-  },
-  {
-    icon: Shield,
-    title: "Governance gaps",
-    description: "You can't answer 'what data was this model trained on' or 'who has access to PII in the vector store.' Data lineage stops at the warehouse—nothing tracks how data flows into embeddings, fine-tuning sets, or prompt context.",
-  },
-  {
-    icon: Search,
-    title: "Works locally, breaks in prod",
-    description: "Different Python versions, different CUDA drivers, feature computation that diverges between training and serving. The model was trained on GPU but served on CPU with different numerical precision, and now the outputs don't match.",
-  },
-  {
-    icon: Zap,
-    title: "Infrastructure requires specialists",
-    description: "Your ML engineers are spending weeks fighting CUDA driver mismatches, debugging OOM errors in Kubernetes, and writing custom serving code. That's time not spent on model quality—the thing that actually differentiates your product.",
   },
 ];
 
