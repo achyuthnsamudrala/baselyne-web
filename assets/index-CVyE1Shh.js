@@ -311,11 +311,11 @@ For more information, see https://radix-ui.com/primitives/docs/components/${t.do
                                                     └───────────────────────┘`}),a.jsxs(Fe,{children:[a.jsx("p",{children:"Debezium sits on a replication slot, so there's no polling — every committed transaction appears as an event within single-digit milliseconds. Events land in a Kafka topic per source table, which gives you independent consumer scaling and clean retention policies per dataset."}),a.jsx("p",{children:"The consumer layer is a Go service we wrote from scratch. We chose Go over Python for the consumer because the goroutine model makes it trivial to fan out batch writes to S3 without the GIL standing in the way."})]}),a.jsx(Ri,{children:"Debezium connector configuration"}),a.jsx(Fe,{children:a.jsx("p",{children:"A few non-obvious settings that matter at scale:"})}),a.jsx(Ur,{lang:"yaml — debezium connector",children:`name: "pg-source-connector"
 config:
   connector.class: "io.debezium.connector.postgresql.PostgresConnector"
-  database.hostname: "${DB_HOST}"
+  database.hostname: "\${DB_HOST}"
   database.port: "5432"
-  database.user: "${DB_USER}"
-  database.password: "${DB_PASSWORD}"
-  database.dbname: "${DB_NAME}"
+  database.user: "\${DB_USER}"
+  database.password: "\${DB_PASSWORD}"
+  database.dbname: "\${DB_NAME}"
   database.server.name: "baselyne"
 
   # Use pgoutput (native) — avoids wal2json dependency
