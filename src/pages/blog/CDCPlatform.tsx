@@ -286,8 +286,10 @@ export default function CDCPlatform() {
                 <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">ErrorRouter</code>,{" "}
                 <code className="text-xs font-mono bg-muted px-1 py-0.5 rounded">SourceMonitor</code>)
                 decouple the pipeline from any specific event transport. Kafka is the default backend
-                (including MSK and Confluent Cloud), but the architecture is designed so that new transports
-                can be added without touching the core pipeline.
+                (with MSK IAM and GCP Managed Kafka auth built-in), with{" "}
+                <strong>Google Pub/Sub</strong> and <strong>Amazon Kinesis</strong> as additional
+                supported transports. Non-Kafka transports use a direct PostgreSQL WAL reader in
+                place of Debezium — no Connect cluster required.
               </p>
             </Prose>
 
@@ -297,7 +299,7 @@ export default function CDCPlatform() {
  │  ┌─────────────┐   ┌──────────────────────────────┐           │
  │  │ Provisioner │──▸│   EventSource (transport)    │           │
  │  │ (topics +   │   │  ┌────────────────────────┐  │           │
- │  │  connector) │   │  │ Kafka / Pub/Sub / PG   │  │           │
+ │  │  connector) │   │  │ Kafka/Pub/Sub/Kinesis  │  │           │
  │  └─────────────┘   │  └────────────┬───────────┘  │           │
  │                    └───────────────┼──────────────┘           │
  │                         SourceEvent stream                    │
