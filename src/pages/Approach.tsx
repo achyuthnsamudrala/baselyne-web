@@ -203,7 +203,7 @@ export default function Approach() {
             </p>
             <Button asChild size="lg" className="mt-8">
               <a
-                href="https://calendly.com/baselyne-systems/30min"
+                href="https://calendly.com/achyuthsamudrala/30min"
                 target="_blank"
                 rel="noopener noreferrer"
                 className="inline-flex items-center gap-2"

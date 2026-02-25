@@ -93,7 +93,7 @@ export default function Home() {
             <div className="mt-10 flex flex-col items-center gap-4 sm:flex-row sm:justify-center">
               <Button asChild size="lg">
                 <a
-                  href="https://calendly.com/baselyne-systems/30min"
+                  href="https://calendly.com/achyuthsamudrala/30min"
                   target="_blank"
                   rel="noopener noreferrer"
                   className="inline-flex items-center gap-2"
