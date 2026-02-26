@@ -7,6 +7,16 @@ import { SEO } from "@/components/SEO";
 
 const posts = [
   {
+    title: "Retrieval OS: A Production-Grade Retrieval Runtime",
+    subtitle: "How we built a serving layer that makes RAG systems deployable, measurable, and safe to operate",
+    date: "February 2026",
+    tags: ["Case Study", "Open Source"],
+    excerpt:
+      "Config versioning, staged rollouts, automatic quality guard-rails, and 2.8 ms rollback propagation — 10,785 QPS on a single node with an 81.4% natural cache hit rate.",
+    href: "/blog/retrieval-os",
+    github: "https://github.com/Baselyne-Systems/retrieval-os",
+  },
+  {
     title: "Building a High-Throughput CDC Platform",
     subtitle: "From database change to lakehouse in milliseconds",
     date: "February 2026",
