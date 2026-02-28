@@ -1,4 +1,4 @@
-import { ArrowRight, Cpu, Gauge, Lock, Zap, CheckCircle2 } from "lucide-react";
+import { ArrowRight, Cpu, Gauge, Lock, Zap, CheckCircle2, Network } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
@@ -29,6 +29,12 @@ const capabilities = [
     title: "AI Observability",
     description:
       "NVIDIA DCGM metrics for GPU health and utilization. Application-level tracing for inference requests through the full serving stack. Token-level cost tracking for LLM workloads so you can attribute spend to specific features and customers, not just 'the AI line item.'",
+  },
+  {
+    icon: Network,
+    title: "Agent Execution Infrastructure",
+    description:
+      "State checkpointing so a tool failure on step 4 doesn't lose steps 1–3. Idempotent retry semantics that re-attempt failed steps without re-executing side effects. Distributed tracing across every model call and tool invocation. Loop detection and token spend guards to prevent runaway agents from becoming runaway costs.",
   },
 ];
 
@@ -118,6 +124,17 @@ export default function AIInfrastructureConsulting() {
                 We've operated GPU infrastructure at scale where utilization
                 and cost control weren't optional—they were the difference
                 between a viable product and an unsustainable cost center.
+              </p>
+              <p>
+                Agentic workflows introduce a separate failure surface. A
+                single-step LLM call is easy to reason about—it either returns
+                or it doesn't. Multi-step agents interleave model calls, tool
+                executions, and state transitions across seconds or minutes. A
+                tool call failure on step 4 of 7 leaves partial state. Retry
+                logic that isn't idempotent re-executes side effects. Loops
+                that should terminate don't. You end up with runaway token
+                spend, silent partial completions, and no way to replay or
+                debug what actually happened.
               </p>
             </div>
           </div>
