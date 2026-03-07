@@ -31,10 +31,30 @@ Schedule a 30-minute call to discuss your infrastructure challenges.
 Calendly: https://calendly.com/achyuthsamudrala/30min
 Website: https://baselynesystems.com/contact
 
+## Blog
+
+Technical case studies on open-source infrastructure built by Baselyne.
+
+### Bulkhead: Defense in Depth for Autonomous AI Agents (March 2026)
+Four independent enforcement layers for AI agent governance: compiled guardrails evaluated in 184ns, kernel-level iptables egress, append-only audit trail, and non-blocking human-in-the-loop escalation. Built with Go 1.24, Rust 1.83, PostgreSQL 16, gRPC.
+URL: https://baselynesystems.com/blog/bulkhead
+GitHub: https://github.com/achyuthnsamudrala/bulkhead
+
+### Retrieval OS: A Production-Grade Retrieval Runtime (February 2026)
+Config versioning, staged rollouts, automatic quality guard-rails, and 2.8ms rollback propagation for RAG systems. 10,785 QPS on a single node with 81.4% natural cache hit rate. Built with FastAPI, Redis, Qdrant, PostgreSQL.
+URL: https://baselynesystems.com/blog/retrieval-os
+GitHub: https://github.com/Baselyne-Systems/retrieval-os
+
+### Building a High-Throughput CDC Platform (February 2026)
+Modular Python CDC platform achieving 38,647 msg/s with config-driven tuning, exactly-once delivery, multi-source support, and Apache Iceberg lakehouse with time travel.
+URL: https://baselynesystems.com/blog/cdc-platform
+GitHub: https://github.com/Baselyne-Systems/cdc-platform
+
 ## Key Pages
 
 - Home: https://baselynesystems.com/
 - Services: https://baselynesystems.com/services
+- Blog: https://baselynesystems.com/blog
 - Approach: https://baselynesystems.com/approach
 - About: https://baselynesystems.com/about
 - Contact: https://baselynesystems.com/contact

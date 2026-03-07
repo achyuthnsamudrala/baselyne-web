@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { SEO } from "@/components/SEO";
+import { SEO, articleSchema } from "@/components/SEO";
 
 // ─── Helper components ────────────────────────────────────────────────────────
 
@@ -198,6 +198,16 @@ export default function CDCPlatform() {
         description="How we built a modular Python CDC platform achieving 38,647 msg/s — with config-driven tuning, exactly-once delivery, and Iceberg lakehouse support."
         keywords="change data capture, CDC platform, Debezium, Kafka, Apache Iceberg, Python asyncio, open source data pipeline"
         canonical="https://baselynesystems.com/blog/cdc-platform"
+        ogType="article"
+        publishedTime="2026-02-01"
+        author="Achyuth Samudrala"
+        structuredData={articleSchema({
+          title: "Building a High-Throughput CDC Platform",
+          description: "How we built a modular Python CDC platform achieving 38,647 msg/s — with config-driven tuning, exactly-once delivery, and Iceberg lakehouse support.",
+          url: "https://baselynesystems.com/blog/cdc-platform",
+          datePublished: "2026-02-01",
+          keywords: ["change data capture", "CDC platform", "Debezium", "Kafka", "Apache Iceberg", "Python asyncio", "open source data pipeline"],
+        })}
       />
 
       <article className="bg-layer-1 py-16 lg:py-24">

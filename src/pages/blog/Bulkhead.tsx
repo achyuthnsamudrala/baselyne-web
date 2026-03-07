@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { SEO } from "@/components/SEO";
+import { SEO, articleSchema } from "@/components/SEO";
 
 // ─── Helper components ────────────────────────────────────────────────────────
 
@@ -159,6 +159,16 @@ export default function Bulkhead() {
         description="How we enforce AI agent guardrails at the infrastructure level, not the prompt level — four independent enforcement layers, kernel-level egress, append-only audit trail, all evaluated in under 50ms."
         keywords="AI agent security, agent guardrails, LLM agent governance, AI infrastructure security, autonomous agent safety, agent sandboxing"
         canonical="https://baselynesystems.com/blog/bulkhead"
+        ogType="article"
+        publishedTime="2026-03-07"
+        author="Achyuth Samudrala"
+        structuredData={articleSchema({
+          title: "Bulkhead: Defense in Depth for Autonomous AI Agents",
+          description: "How we enforce AI agent guardrails at the infrastructure level, not the prompt level — four independent enforcement layers, kernel-level egress, append-only audit trail, all evaluated in under 50ms.",
+          url: "https://baselynesystems.com/blog/bulkhead",
+          datePublished: "2026-03-07",
+          keywords: ["AI agent security", "agent guardrails", "LLM agent governance", "AI infrastructure security", "autonomous agent safety", "agent sandboxing"],
+        })}
       />
 
       <article className="bg-layer-1 py-16 lg:py-24">

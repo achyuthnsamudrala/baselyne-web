@@ -2,7 +2,7 @@ import { ArrowLeft, ArrowRight, Github } from "lucide-react";
 import { Link } from "react-router-dom";
 import { Layout } from "@/components/Layout";
 import { Button } from "@/components/ui/button";
-import { SEO } from "@/components/SEO";
+import { SEO, articleSchema } from "@/components/SEO";
 
 // ─── Helper components ────────────────────────────────────────────────────────
 
@@ -219,6 +219,16 @@ export default function RetrievalOS() {
         description="How we built a serving layer that makes RAG systems deployable, measurable, and safe to operate — 10,785 QPS on a single node, 2.8ms rollback propagation, automatic quality guard-rails."
         keywords="RAG infrastructure, retrieval augmented generation, vector search, embedding versioning, production RAG, semantic search platform"
         canonical="https://baselynesystems.com/blog/retrieval-os"
+        ogType="article"
+        publishedTime="2026-02-01"
+        author="Achyuth Samudrala"
+        structuredData={articleSchema({
+          title: "Retrieval OS: A Production-Grade Retrieval Runtime",
+          description: "How we built a serving layer that makes RAG systems deployable, measurable, and safe to operate — 10,785 QPS on a single node, 2.8ms rollback propagation, automatic quality guard-rails.",
+          url: "https://baselynesystems.com/blog/retrieval-os",
+          datePublished: "2026-02-01",
+          keywords: ["RAG infrastructure", "retrieval augmented generation", "vector search", "embedding versioning", "production RAG", "semantic search platform"],
+        })}
       />
 
       <article className="bg-layer-1 py-16 lg:py-24">

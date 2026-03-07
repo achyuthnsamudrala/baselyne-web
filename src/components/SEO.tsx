@@ -8,6 +8,8 @@ interface SEOProps {
   ogImage?: string;
   ogType?: "website" | "article";
   structuredData?: object;
+  publishedTime?: string;
+  author?: string;
 }
 
 const BASE_URL = "https://baselynesystems.com";
@@ -20,6 +22,8 @@ export function SEO({
   ogImage = `${BASE_URL}/og-image.jpg`,
   ogType = "website",
   structuredData,
+  publishedTime,
+  author,
 }: SEOProps) {
   const fullTitle = title.includes("Baselyne")
     ? title
@@ -41,6 +45,15 @@ export function SEO({
       <meta property="og:image" content={ogImage} />
       <meta property="og:site_name" content="Baselyne Systems" />
       <meta property="og:locale" content="en_US" />
+      {ogType === "article" && publishedTime && (
+        <meta property="article:published_time" content={publishedTime} />
+      )}
+      {ogType === "article" && author && (
+        <meta property="article:author" content={author} />
+      )}
+      {ogType === "article" && (
+        <meta property="article:section" content="Technology" />
+      )}
 
       {/* Twitter */}
       <meta name="twitter:card" content="summary_large_image" />
@@ -122,6 +135,50 @@ export const professionalServiceSchema = {
     ],
   },
 };
+
+// Article schema factory for blog posts
+export function articleSchema({
+  title,
+  description,
+  url,
+  datePublished,
+  keywords,
+}: {
+  title: string;
+  description: string;
+  url: string;
+  datePublished: string;
+  keywords: string[];
+}) {
+  return {
+    "@context": "https://schema.org",
+    "@type": "TechArticle",
+    headline: title,
+    description,
+    url,
+    datePublished,
+    author: {
+      "@type": "Person",
+      name: "Achyuth Samudrala",
+      url: "https://www.linkedin.com/in/achyuthsamudrala/",
+    },
+    publisher: {
+      "@type": "Organization",
+      name: "Baselyne Systems",
+      url: "https://baselynesystems.com",
+      logo: {
+        "@type": "ImageObject",
+        url: "https://baselynesystems.com/og-image.jpg",
+      },
+    },
+    image: "https://baselynesystems.com/og-image.jpg",
+    keywords,
+    mainEntityOfPage: {
+      "@type": "WebPage",
+      "@id": url,
+    },
+  };
+}
 
 // Service-specific schemas
 export const aiInfraServiceSchema = {
