@@ -7,6 +7,16 @@ import { SEO } from "@/components/SEO";
 
 const posts = [
   {
+    title: "Bulkhead: Defense in Depth for Autonomous AI Agents",
+    subtitle: "How we enforce AI agent guardrails at the infrastructure level, not the prompt level",
+    date: "March 2026",
+    tags: ["Case Study", "Open Source"],
+    excerpt:
+      "Four independent enforcement layers — compiled guardrails evaluated in 184ns, kernel-level iptables egress, append-only audit trail, and non-blocking human-in-the-loop escalation — all evaluated before a tool call executes.",
+    href: "/blog/bulkhead",
+    github: "https://github.com/achyuthnsamudrala/bulkhead",
+  },
+  {
     title: "Retrieval OS: A Production-Grade Retrieval Runtime",
     subtitle: "How we built a serving layer that makes RAG systems deployable, measurable, and safe to operate",
     date: "February 2026",
