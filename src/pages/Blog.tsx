@@ -5,46 +5,114 @@ import { Button } from "@/components/ui/button";
 import { Card, CardContent } from "@/components/ui/card";
 import { SEO } from "@/components/SEO";
 
-const posts = [
+type Post = {
+  title: string;
+  subtitle: string;
+  date: string;
+  tags: string[];
+  excerpt: string;
+  href: string;
+  github: string;
+};
+
+const sections: { category: string; description: string; posts: Post[] }[] = [
   {
-    title: "Bulkhead: Defense in Depth for Autonomous AI Agents",
-    subtitle: "How we enforce AI agent guardrails at the infrastructure level, not the prompt level",
-    date: "March 2026",
-    tags: ["Case Study", "Open Source"],
-    excerpt:
-      "Four independent enforcement layers — compiled guardrails evaluated in 184ns, kernel-level iptables egress, append-only audit trail, and non-blocking human-in-the-loop escalation — all evaluated before a tool call executes.",
-    href: "/blog/bulkhead",
-    github: "https://github.com/achyuthnsamudrala/bulkhead",
+    category: "AI Infrastructure",
+    description: "Agent governance, retrieval serving, and production AI systems.",
+    posts: [
+      {
+        title: "Bulkhead: Defense in Depth for Autonomous AI Agents",
+        subtitle: "How we enforce AI agent guardrails at the infrastructure level, not the prompt level",
+        date: "March 2026",
+        tags: ["Case Study", "Open Source"],
+        excerpt:
+          "Four independent enforcement layers — compiled guardrails evaluated in 184ns, kernel-level iptables egress, append-only audit trail, and non-blocking human-in-the-loop escalation — all evaluated before a tool call executes.",
+        href: "/blog/bulkhead",
+        github: "https://github.com/achyuthnsamudrala/bulkhead",
+      },
+      {
+        title: "Retrieval OS: A Production-Grade Retrieval Runtime",
+        subtitle: "How we built a serving layer that makes RAG systems deployable, measurable, and safe to operate",
+        date: "February 2026",
+        tags: ["Case Study", "Open Source"],
+        excerpt:
+          "Config versioning, staged rollouts, automatic quality guard-rails, and 2.8 ms rollback propagation — 10,785 QPS on a single node with an 81.4% natural cache hit rate.",
+        href: "/blog/retrieval-os",
+        github: "https://github.com/Baselyne-Systems/retrieval-os",
+      },
+    ],
   },
   {
-    title: "Retrieval OS: A Production-Grade Retrieval Runtime",
-    subtitle: "How we built a serving layer that makes RAG systems deployable, measurable, and safe to operate",
-    date: "February 2026",
-    tags: ["Case Study", "Open Source"],
-    excerpt:
-      "Config versioning, staged rollouts, automatic quality guard-rails, and 2.8 ms rollback propagation — 10,785 QPS on a single node with an 81.4% natural cache hit rate.",
-    href: "/blog/retrieval-os",
-    github: "https://github.com/Baselyne-Systems/retrieval-os",
-  },
-  {
-    title: "Building a High-Throughput CDC Platform",
-    subtitle: "From database change to lakehouse in milliseconds",
-    date: "February 2026",
-    tags: ["Case Study", "Open Source"],
-    excerpt:
-      "How we built a modular Python CDC platform achieving 38,647 msg/s with config-driven tuning — exactly-once delivery, multi-source support, and Iceberg lakehouse with time travel.",
-    href: "/blog/cdc-platform",
-    github: "https://github.com/Baselyne-Systems/cdc-platform",
+    category: "Data Infrastructure",
+    description: "Pipelines, lakehouse architecture, and high-throughput data engineering.",
+    posts: [
+      {
+        title: "Building a High-Throughput CDC Platform",
+        subtitle: "From database change to lakehouse in milliseconds",
+        date: "February 2026",
+        tags: ["Case Study", "Open Source"],
+        excerpt:
+          "How we built a modular Python CDC platform achieving 38,647 msg/s with config-driven tuning — exactly-once delivery, multi-source support, and Iceberg lakehouse with time travel.",
+        href: "/blog/cdc-platform",
+        github: "https://github.com/Baselyne-Systems/cdc-platform",
+      },
+    ],
   },
 ];
+
+function PostCard({ post }: { post: Post }) {
+  return (
+    <Card className="border-border/50 bg-card transition-shadow hover:shadow-md">
+      <CardContent className="p-8">
+        <div className="flex flex-wrap gap-2">
+          {post.tags.map((tag) => (
+            <span
+              key={tag}
+              className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
+            >
+              {tag}
+            </span>
+          ))}
+        </div>
+
+        <h3 className="mt-4 text-2xl font-semibold text-foreground">
+          {post.title}
+        </h3>
+        <p className="mt-1 text-muted-foreground">{post.subtitle}</p>
+        <p className="mt-4 text-sm text-muted-foreground">{post.excerpt}</p>
+
+        <div className="mt-6 flex flex-wrap items-center gap-4">
+          <span className="text-xs text-muted-foreground/70">{post.date}</span>
+          <div className="flex items-center gap-3 ml-auto">
+            <a
+              href={post.github}
+              target="_blank"
+              rel="noopener noreferrer"
+              className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
+            >
+              <Github className="h-4 w-4" />
+              GitHub
+            </a>
+            <Button asChild size="sm">
+              <Link to={post.href} className="inline-flex items-center gap-1.5">
+                Read Post
+                <ArrowRight className="h-3.5 w-3.5" />
+              </Link>
+            </Button>
+          </div>
+        </div>
+      </CardContent>
+    </Card>
+  );
+}
 
 export default function Blog() {
   return (
     <Layout>
       <SEO
         title="Blog | Baselyne Systems"
-        description="Technical writing from Baselyne — case studies, architecture deep-dives, and open-source engineering."
-        keywords="CDC platform, change data capture, data engineering blog, open source data infrastructure"
+        description="Technical case studies and open-source engineering from Baselyne — AI infrastructure, agent governance, retrieval systems, and data pipelines."
+        keywords="AI infrastructure blog, agent governance, RAG infrastructure, CDC platform, data engineering, open source AI"
         canonical="https://baselynesystems.com/blog"
       />
 
@@ -56,62 +124,33 @@ export default function Blog() {
               Blog
             </h1>
             <p className="mt-6 text-lg text-muted-foreground">
-              Technical writing from Baselyne — case studies, architecture deep-dives, and open-source engineering.
+              Technical case studies and open-source engineering from Baselyne.
             </p>
           </div>
         </div>
       </section>
 
-      {/* Posts */}
-      <section className="bg-layer-1 py-20 lg:py-28">
-        <div className="container mx-auto px-4 lg:px-8">
-          <div className="mx-auto max-w-3xl grid gap-8">
-            {posts.map((post) => (
-              <Card key={post.href} className="border-border/50 bg-card transition-shadow hover:shadow-md">
-                <CardContent className="p-8">
-                  <div className="flex flex-wrap gap-2">
-                    {post.tags.map((tag) => (
-                      <span
-                        key={tag}
-                        className="inline-block rounded-full bg-primary/10 px-3 py-1 text-xs font-medium text-primary"
-                      >
-                        {tag}
-                      </span>
-                    ))}
-                  </div>
-
-                  <h2 className="mt-4 text-2xl font-semibold text-foreground">
-                    {post.title}
-                  </h2>
-                  <p className="mt-1 text-muted-foreground">{post.subtitle}</p>
-                  <p className="mt-4 text-sm text-muted-foreground">{post.excerpt}</p>
-
-                  <div className="mt-6 flex flex-wrap items-center gap-4">
-                    <span className="text-xs text-muted-foreground/70">{post.date}</span>
-                    <div className="flex items-center gap-3 ml-auto">
-                      <a
-                        href={post.github}
-                        target="_blank"
-                        rel="noopener noreferrer"
-                        className="inline-flex items-center gap-1.5 text-sm text-muted-foreground transition-colors hover:text-foreground"
-                      >
-                        <Github className="h-4 w-4" />
-                        GitHub
-                      </a>
-                      <Button asChild size="sm">
-                        <Link to={post.href} className="inline-flex items-center gap-1.5">
-                          Read Post
-                          <ArrowRight className="h-3.5 w-3.5" />
-                        </Link>
-                      </Button>
-                    </div>
-                  </div>
-                </CardContent>
-              </Card>
-            ))}
+      {/* Sections */}
+      {sections.map((section, i) => (
+        <section
+          key={section.category}
+          className={`py-20 lg:py-28 ${i % 2 === 0 ? "bg-layer-1" : "bg-layer-2"}`}
+        >
+          <div className="container mx-auto px-4 lg:px-8">
+            <div className="mx-auto max-w-3xl">
+              <p className="text-sm font-medium uppercase tracking-wider text-primary">
+                {section.category}
+              </p>
+              <p className="mt-1 text-muted-foreground">{section.description}</p>
+              <div className="mt-8 grid gap-8">
+                {section.posts.map((post) => (
+                  <PostCard key={post.href} post={post} />
+                ))}
+              </div>
+            </div>
           </div>
-        </div>
-      </section>
+        </section>
+      ))}
     </Layout>
   );
 }
